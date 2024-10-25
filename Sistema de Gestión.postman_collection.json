@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "da57867b-8b1e-43f6-b863-0e825b848ad5",
+		"name": "Sistema de Gestión",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2818928"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Obtener todos los productos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener producto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productos/9898",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"9898"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"9898\",\n    \"nombre\": \"sdasdfsdf \",\n    \"descripcion\": \"sdfsd Semola o Fideos\",\n    \"precio\": 1000,\n    \"stock\": 10,\n    \"estado\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"update \",\n    \"descripcion\": \"update\",\n    \"precio\": 9,\n    \"stock\": 999,\n    \"estado\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productos/9898",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"9898"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productos/elimina/9898",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"elimina",
+								"9898"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/clientes/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"test\",\n    \"email\": \"test@prooveedor.com\",\n    \"telefono\": \"333sa\",\n    \"tipo\":\"CLIENTE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \" Actualizado\",\n    \"email\": \"ewrewe.com\",\n    \"telefono\": \"3331\",\n    \"tipo\": \"CLIENT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientes/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/clientes/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"item": [
+				{
+					"name": "Eliminar Venta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ventas/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"id\": 1\n    },\n    \"fechaVenta\": \"2024-09-26\",\n    \"total\":0\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ventas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Venta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"id\": 1\n    },\n    \"fechaVenta\": \"2024-09-30\",\n    \"total\":0\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ventas/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener ventas por fecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ventas/por-fecha?fecha=2024-07-01",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas",
+								"por-fecha"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2024-07-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener ventas por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ventas/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/ventas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventario",
+			"item": [
+				{
+					"name": "Actualizar stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/inventario/actualizar-stock/1?cantidad=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"inventario",
+								"actualizar-stock",
+								"1"
+							],
+							"query": [
+								{
+									"key": "cantidad",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos con bajo stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/inventario/bajo-stock?umbral=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"inventario",
+								"bajo-stock"
+							],
+							"query": [
+								{
+									"key": "umbral",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Finanzas",
+			"item": [
+				{
+					"name": "Registrar transacción",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"monto\": 100.00,\n    \"tipo\": \"INGRESO\",\n    \"fecha\": \"2024-07-01\",\n    \"descripcion\": \"Venta de productos\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/finanzas/transaccion",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"finanzas",
+								"transaccion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/finanzas/balance?inicio=2024-07-01&fin=2024-07-31",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"finanzas",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "inicio",
+									"value": "2024-07-01"
+								},
+								{
+									"key": "fin",
+									"value": "2024-07-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetalleVenta",
+			"item": [
+				{
+					"name": "Eliminar DEtalle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/clientes/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/detalle",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"detalle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Detalle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \" Actualizado\",\n    \"email\": \"ewrewe.com\",\n    \"telefono\": \"3331\",\n    \"tipo\": \"CLIENT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientes/22",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientes",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbYiD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/detalle/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"detalle",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear DetalleVenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"id\": 1\n    },\n    \"fechaVenta\": \"2024-07-01\",\n    \"detalles\": [\n        {\n            \"producto\": {\n                \"id\": 1\n            },\n            \"cantidad\": 2,\n            \"precioUnitario\": 29.99\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/ventas/realizar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"ventas",
+								"realizar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
